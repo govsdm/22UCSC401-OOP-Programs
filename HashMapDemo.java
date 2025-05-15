@@ -25,6 +25,15 @@ class HashMapDemo {
 		}
 		System.out.println();
 
+		System.out.println("Dispaly elements of Map using iterator:");
+		Iterator<Entry<String, Double>> itr = set.iterator();
+		
+		while(itr.hasNext()) {
+			Map.Entry<String, Double> entry = itr.next();
+			System.out.print(entry.getKey() + ": " + entry.getValue());
+			System.out.println();
+		}
+
 		// Deposit 1000 into John Doe's account.
 		double balance = hm.get("John Doe");
 		hm.put("John Doe", balance + 1000);
